@@ -1,7 +1,7 @@
 {
-  "clientes": [
+  "clients": [
     {
-      "name": "Julián Morán",
+      "name": "Name",
       "company": "sss",
       "email": "julian@gmail.com",
       "phone": "09990000",
@@ -10,8 +10,8 @@
     },
     {
       "name": "Julián Morán",
-      "company": "En Bici Sin Edad - Uruguay",
-      "email": "julianmoran1@gmail.com",
+      "company": "bbb",
+      "email": "julian@gmail.com",
       "phone": "+123455678",
       "notes": "ddd",
       "id": 2

@@ -11,7 +11,7 @@ export default function EditClient() {
   useEffect(() => {
     const getClientAPI = async () => {
       try {
-        const url = `http://localhost:4000/clientes/${id}`;
+        const url = `http://localhost:4000/clients/${id}`;
         const response = await fetch(url);
         const result = await response.json();
         setClient(result);

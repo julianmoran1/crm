@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const getClientsAPI = async () => {
       try {
-        const url = "http://localhost:4000/clientes";
+        const url = "http://localhost:4000/clients";
         const response = await fetch(url);
         const result = await response.json();
         setClients(result);
@@ -22,7 +22,7 @@ export default function Home() {
     // eslint-disable-next-line no-restricted-globals
 
     try {
-      const url = `http://localhost:4000/clientes/${id}`;
+      const url = `http://localhost:4000/clients/${id}`;
         const response = await fetch(url, {
           method: "DELETE",
         });
