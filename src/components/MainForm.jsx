@@ -10,7 +10,7 @@ export default function MainForm({ title, client }) {
   const handleSubmit = async (values) => {
     try {
       if (client.id) {
-        const url = `http://localhost:4000/clients/${client.id}`;
+        const url = `${process.env.REACT_APP_API_URL}/${client.id}`;
         const response = await fetch(url, {
           method: "PUT",
           body: JSON.stringify(values),
@@ -20,7 +20,7 @@ export default function MainForm({ title, client }) {
         });
         await response.json();
       } else {
-        const url = "http://localhost:4000/clients";
+        const url = process.env.REACT_APP_API_URL;
 
         const response = await fetch(url, {
           method: "POST",

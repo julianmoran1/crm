@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const getClientsAPI = async () => {
       try {
-        const url = "http://localhost:4000/clients";
+        const url = process.env.REACT_APP_API_URL;
         const response = await fetch(url);
         const result = await response.json();
         setClients(result);

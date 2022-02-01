@@ -6,6 +6,8 @@ import EditClient from "./pages/EditClient";
 import ViewClient from "./pages/ViewClient";
 
 function App() {
+
+console.log(process.env.REACT_APP_API_URL)
   return (
     <BrowserRouter>
       <Routes>
