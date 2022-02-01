@@ -22,7 +22,7 @@ export default function Home() {
     // eslint-disable-next-line no-restricted-globals
 
     try {
-      const url = `http://localhost:4000/clients/${id}`;
+      const url = `${process.env.REACT_APP_API_URL}/${id}`;
         const response = await fetch(url, {
           method: "DELETE",
         });
