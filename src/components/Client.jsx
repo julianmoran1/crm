@@ -22,14 +22,14 @@ export default function Client({ client, handleDelete } ) {
         <button
           type="button"
           className="bg-yellow-600 hover:bg-yellow-700 block w-full text-white p-2 uppercase font-bold text-xs"
-          onClick={()=> navigate(`/clientes/${id}`)}
+          onClick={()=> navigate(`/clients/${id}`)}
         >
           View
         </button>
         <button
           type="button"
           className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3"
-          onClick={()=> navigate(`/clientes/editar/${id}`)}
+          onClick={()=> navigate(`/clients/edit/${id}`)}
         >
           Edit
         </button>

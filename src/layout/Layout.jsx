@@ -13,7 +13,7 @@ export default function Layout() {
           <Link
             to="/"
             className={
-              location.pathname === "/clientes"
+              location.pathname === "/clients"
                 ? "text-blue-300 text-2xl block mt-2"
                 : "text-white text-2xl block mt-2 hover:text-blue-300"
             }
@@ -21,9 +21,9 @@ export default function Layout() {
             Clients
           </Link>
           <Link
-            to="/nuevo"
+            to="/new"
             className={
-              location.pathname === "/clientes/nuevo"
+              location.pathname === "/clients/new"
                 ? "text-blue-300 text-2xl block mt-2"
                 : "text-white text-2xl block mt-2 hover:text-blue-300"
             }

@@ -1,4 +1,4 @@
-import Formulario from "../components/Formulario";
+import MainForm from "../components/MainForm";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -23,15 +23,13 @@ export default function EditClient() {
     getClientAPI();
   }, []);
 
-  //const { nombre, company, email, phone, notes } = cliente;
-
   return (
     <>
       <h1 className="font-black text-4xl text-blue-900">Edit Client</h1>
       <p className="mt-3">Fill the inputs to edit the client</p>
       
       {client?.name ? (
-        <Formulario title="Edit client" client={client} />
+        <MainForm title="Edit client" client={client} />
       ) : (
         <p>Invalid client's id</p>
       )}

@@ -4,7 +4,7 @@ import { Formik, Form, Field } from "formik";
 import Alert from "./Alert";
 import * as Yup from "yup";
 
-export default function Formulario({ title, client }) {
+export default function MainForm({ title, client }) {
   const navigate = useNavigate();
 
   const handleSubmit = async (values) => {
@@ -161,6 +161,6 @@ export default function Formulario({ title, client }) {
   );
 }
 
-Formulario.defaultProps = {
+MainForm.defaultProps = {
   client: {},
 };

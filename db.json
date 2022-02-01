@@ -7,6 +7,14 @@
       "phone": "09990000",
       "notes": "aa",
       "id": 1
+    },
+    {
+      "name": "Julián Morán",
+      "company": "En Bici Sin Edad - Uruguay",
+      "email": "julianmoran1@gmail.com",
+      "phone": "+123455678",
+      "notes": "ddd",
+      "id": 2
     }
   ]
 }

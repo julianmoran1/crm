@@ -1,4 +1,4 @@
-import Formulario from "../components/Formulario";
+import MainForm from "../components/MainForm";
 
 
 export default function NewClient() {
@@ -6,7 +6,7 @@ export default function NewClient() {
     <>
       <h1 className="font-black text-4xl text-blue-900">New Client</h1>
       <p className="mt-3">Fill the inputs to register a client</p>
-      <Formulario title="Add client" />
+      <MainForm title="Add client" />
     </>
   );
 }

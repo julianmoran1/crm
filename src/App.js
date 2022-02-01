@@ -11,9 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}> 
           <Route index element={<Home />} />
-          <Route path="nuevo" element={<NewClient />} />
-          <Route path="clientes/editar/:id" element={<EditClient />} />
-          <Route path="clientes/:id" element={<ViewClient />} />
+          <Route path="new" element={<NewClient />} />
+          <Route path="clients/edit/:id" element={<EditClient />} />
+          <Route path="clients/:id" element={<ViewClient />} />
         </Route>
       </Routes>
     </BrowserRouter>

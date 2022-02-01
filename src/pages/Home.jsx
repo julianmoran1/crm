@@ -20,14 +20,13 @@ export default function Home() {
 
   const handleDelete = async (id) => {
     // eslint-disable-next-line no-restricted-globals
-    //const confirmar = confirm("¿Desea eliminar el cliente?")
-    //console.log(confirmar)
+
     try {
       const url = `http://localhost:4000/clientes/${id}`;
-        const respuesta = await fetch(url, {
+        const response = await fetch(url, {
           method: "DELETE",
         });
-        await respuesta.json();
+        await response.json();
         const clientsArray = clients.filter((client) => client.id !== id)
         setClients(clientsArray)
 
