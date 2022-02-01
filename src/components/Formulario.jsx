@@ -4,32 +4,32 @@ import { Formik, Form, Field } from "formik";
 import Alert from "./Alert";
 import * as Yup from "yup";
 
-export default function Formulario({ titulo, cliente }) {
+export default function Formulario({ title, client }) {
   const navigate = useNavigate();
 
-  const handleSubmit = async (valores) => {
+  const handleSubmit = async (values) => {
     try {
-      if (cliente.id) {
-        const url = `http://localhost:4000/clientes/${cliente.id}`;
-        const respuesta = await fetch(url, {
+      if (client.id) {
+        const url = `http://localhost:4000/clientes/${client.id}`;
+        const response = await fetch(url, {
           method: "PUT",
-          body: JSON.stringify(valores),
+          body: JSON.stringify(values),
           headers: {
             "Content-Type": "application/json",
           },
         });
-        await respuesta.json();
+        await response.json();
       } else {
         const url = "http://localhost:4000/clientes";
 
-        const respuesta = await fetch(url, {
+        const response = await fetch(url, {
           method: "POST",
-          body: JSON.stringify(valores),
+          body: JSON.stringify(values),
           headers: {
             "Content-Type": "application/json",
           },
         });
-        await respuesta.json();
+        await response.json();
       }
     } catch (error) {
       console.log(error);
@@ -37,7 +37,7 @@ export default function Formulario({ titulo, cliente }) {
   };
 
 
-  const nuevoClienteSchema = Yup.object().shape({
+  const newClientSchema = Yup.object().shape({
     name: Yup.string()
       .required("Client's name is mandatory")
       .min(3, "Client's name is too short")
@@ -56,22 +56,22 @@ export default function Formulario({ titulo, cliente }) {
   return (
     <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md md:w-3/4 mx-auto">
       <h1 className="text-gray-600 font-bod text-xl uppercase text-center">
-        {titulo}
+        {title}
       </h1>
       <Formik
         initialValues={{
-          name: cliente?.name ?? "",
-          company: cliente?.company ?? "",
-          email: cliente?.email ?? "",
-          phone: cliente?.phone ?? "",
-          notes: cliente?.notes ?? "",
+          name: client?.name ?? "",
+          company: client?.company ?? "",
+          email: client?.email ?? "",
+          phone: client?.phone ?? "",
+          notes: client?.notes ?? "",
         }}
         onSubmit={async (values, { resetForm }) => {
           await handleSubmit(values);
           resetForm();
           navigate("/");
         }}
-        validationSchema={nuevoClienteSchema}
+        validationSchema={newClientSchema}
         enableReinitialize={true}
       >
         {({ errors, touched }) => (
@@ -152,7 +152,7 @@ export default function Formulario({ titulo, cliente }) {
               type="submit"
               className="mt-5 w-full bg-blue-800 p-3 text-white uppercase font-bold text-lg"
             >
-              {titulo}
+              {title}
             </button>
           </Form>
         )}
@@ -162,5 +162,5 @@ export default function Formulario({ titulo, cliente }) {
 }
 
 Formulario.defaultProps = {
-  cliente: {},
+  client: {},
 };
