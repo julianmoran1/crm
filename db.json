@@ -1,12 +1,3 @@
 {
-  "clients": [
-    {
-      "name": "Julián Morán",
-      "company": "bbb",
-      "email": "julian@gmail.com",
-      "phone": "+123455678",
-      "notes": "ddd",
-      "id": 2
-    }
-  ]
+  "clients": []
 }
